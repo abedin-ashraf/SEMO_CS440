@@ -1,3 +1,6 @@
+<?php
+    include('connection.php')
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,10 +13,11 @@
     <div id="full">
         <div id="inner_full">
             <div id="header">
-                <h2>Redhawks Blood Bank Management System</h2>
+                <h2 align="center">Redhawks Blood Bank Management System</h2>
             </div>
             <div id="body">
                 <br><br><br><br><br>
+                <form action="" method="post">
                 <table align="center">
                     <tr>
                         <td width="150px" height="50px"><b>Enter Username</b></td>
@@ -27,6 +31,13 @@
                         <td><input type="submit" name="sub" value="Login" style="width:70px; height:30px; border-radius: 5px"></td>
                     </tr>
                 </table>
+            </form>
+            <?php
+            if(isset($_POST['sub'])){
+                $un=$_POST['un'];
+                $ps=$_POST['ps'];
+            }
+            ?>
             </div>
             <div id="footer"><h4 align="center">Copyright@mohammedashraf</h4></div>
         </div>
